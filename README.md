@@ -1,6 +1,9 @@
-[Русская версия](README_RU.md)
-
 # RE&CT
+
+This is my try to revive this project, I will try to add as many use cases as possible (in my free time).
+I used the same license and credited the original autors.
+
+https://stanfrbd.github.io/react-reborn/
 
 ![](docs/images/logo_v2.png)
 
