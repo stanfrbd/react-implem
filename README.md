@@ -1,9 +1,12 @@
 # RE&CT
 
-This is my try to revive this project, I will try to add as many use cases as possible (in my free time).
-I used the same license and credited the original autors.
+This project is my attempt to revive and expand upon the original framework by transforming it into a practical, implementation-focused resource. Unlike the theoretical nature of the original, this project aims to serve as a comprehensive wiki, providing actionable technical steps for recommendations and procedures.
 
-https://stanfrbd.github.io/react-reborn/
+The goal is to include a wide range of use cases, leveraging different editors, security solutions, and hunting techniques to make the framework more applicable to real-world scenarios. By doing so, this project will act as a living knowledge base, continuously updated with practical insights and methodologies.
+
+I have retained the original license and credited the authors, ensuring proper acknowledgment of their foundational work while building upon it to create a more hands-on and versatile resource.
+
+https://stanfrbd.github.io/react-implem
 
 ![](docs/images/logo_v2.png)
 

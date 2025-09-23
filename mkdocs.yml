@@ -1,6 +1,6 @@
-site_name: RE&CT Reborn
-repo_name: stanfrbd/react-reborn
-repo_url: https://github.com/stanfrbd/react-reborn
+site_name: RE&CT Implementation
+repo_name: stanfrbd/react-implem
+repo_url: https://github.com/stanfrbd/react-implem
 edit_uri: edit/master/docs/
 
 theme:
