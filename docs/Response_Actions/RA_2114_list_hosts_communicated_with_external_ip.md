@@ -11,3 +11,20 @@
 ### Workflow
 
 List hosts communicated with an external IP address using the most efficient way.  
+
+## Using Microsoft Defender for Endpoint Advanced Hunting: 
+
+```kusto
+DeviceNetworkEvents
+| where RemoteIP == "1.1.1.1"
+| summarize count() by DeviceName, InitiatingProcessAccountUpn, RemoteIP, InitiatingProcessFileName
+```
+
+## Using Crowdstrike Advanced Event Search
+
+```kusto
+#event_simpleName="NetworkConnectIP4"
+| RemoteIP = "1.1.1.1"
+| groupBy([ComputerName, UserName, ContextBaseFileName, RemoteIP])
+| sort([_count], order=desc)
+```
