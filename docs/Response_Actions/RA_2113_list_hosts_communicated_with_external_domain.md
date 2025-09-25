@@ -11,3 +11,22 @@
 ### Workflow
 
 List hosts communicated with an external domain using the most efficient way.  
+
+## Using Microsoft Defender for Endpoint Advanced Hunting: 
+
+Note: MDE does not log domains directly, but you can search for URLs containing the domain.
+
+```kusto
+DeviceNetworkEvents
+| where RemoteUrl contains "example.com"
+| summarize count() by DeviceName, InitiatingProcessAccountUpn, RemoteUrl, InitiatingProcessFileName
+```
+
+## Using Crowdstrike Advanced Event Search
+
+```kusto
+#event_simpleName="DnsRequest"
+| DomainName = "example.com"
+| groupBy([ComputerName, UserName, ContextBaseFileName, DomainName])
+| sort([_count], order=desc)
+```
