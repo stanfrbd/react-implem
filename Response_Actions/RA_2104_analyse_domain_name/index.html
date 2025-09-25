@@ -3532,6 +3532,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      External resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6404,6 +6413,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      External resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6473,8 +6491,93 @@
 </tbody>
 </table>
 <h3 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
-<p>Description of the workflow for the Response Action in markdown format.<br />
-Here newlines will be saved.  </p>
+<ol>
+<li>
+<p><strong>Initial Context Gathering</strong>  </p>
+<ul>
+<li>Source of domain: Identify how the domain was flagged (e.g., SIEM alert, phishing email, firewall logs).  </li>
+<li>Associated activity: Note any suspicious behavior (e.g., data exfiltration, command-and-control traffic).  </li>
+<li>Timestamp: Record when the domain was first observed.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Passive DNS and WHOIS Lookup</strong>  </p>
+<ul>
+<li>WHOIS data:  </li>
+<li>Registrar, registration date, expiration date.  </li>
+<li>Contact info (often redacted or privacy-protected).  </li>
+<li>Check for recently registered domains (often suspicious).  </li>
+<li>Passive DNS:  </li>
+<li>Historical IP resolutions.  </li>
+<li>Subdomains and related domains.  </li>
+<li>Changes in hosting infrastructure.  </li>
+<li>Be cautious about DNS records, including MX records and TXT records.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reputation and Threat Intelligence Checks</strong>  </p>
+<ul>
+<li>Query the domain against:  </li>
+<li>VirusTotal  </li>
+<li>MDTI  </li>
+<li>Cyberbro  </li>
+<li>Google with dorks  </li>
+<li>Look for:  </li>
+<li>Blacklist status.  </li>
+<li>Associated malware or phishing campaigns.  </li>
+<li>Related threat actor infrastructure.</li>
+</ul>
+</li>
+<li>
+<p><strong>Open Source Intelligence (OSINT)</strong>  </p>
+<ul>
+<li>Search the domain on:  </li>
+<li>Google, Reddit, Twitter, forums.  </li>
+<li>Security blogs or GitHub repositories.  </li>
+<li>Look for:  </li>
+<li>Reports of abuse.  </li>
+<li>Indicators of compromise (IOCs).  </li>
+<li>Connections to known campaigns.</li>
+</ul>
+</li>
+<li>
+<p><strong>Infrastructure and Hosting Analysis</strong>  </p>
+<ul>
+<li>IP geolocation: Where is the domain hosted?  </li>
+<li>ASN info: Is it part of a suspicious autonomous system?  </li>
+<li>SSL certificate:  </li>
+<li>Check issuer, validity, and subject.  </li>
+<li>Self-signed or Let's Encrypt certificates may raise flags in some contexts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Behavioral and Content Analysis</strong>  </p>
+<ul>
+<li>Sandboxing:  </li>
+<li>Use tools like URLScan.io or Any.Run to analyze domain behavior.  </li>
+<li>Manual inspection:  </li>
+<li>Visit the domain in a secure VM or isolated browser.  </li>
+<li>Look for phishing pages, drive-by downloads, or obfuscated scripts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Correlation and Enrichment</strong>  </p>
+<ul>
+<li>Cross-reference with:  </li>
+<li>Internal logs (proxy, firewall, EDR, ITSM).  </li>
+<li>Other IOCs (IP addresses, file hashes).  </li>
+<li>MITRE ATT&amp;CK techniques.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Identify Outcome</strong><br />
+    - Determine if the domain is legitimate.<br />
+    - Assess if the domain is malicious.<br />
+    - Confirm if the domain is not harmful.</p>
+<h3 id="external-resources">External resources<a class="headerlink" href="#external-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://gopivot.ing/artifacts/domain/">GoPivot Domain Artifacts</a></li>
+</ul>
 
 
 
@@ -6497,7 +6600,7 @@ Here newlines will be saved.  </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 23, 2020 12:13:45 UTC"><span class="timeago" datetime="2020-09-23T12:13:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 23, 2020 12:13:45 UTC">2020-09-23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 25, 2025 12:53:35 UTC"><span class="timeago" datetime="2025-09-25T12:53:35+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 25, 2025 12:53:35 UTC">2025-09-25</span>
   </span>
 
     
@@ -6521,7 +6624,7 @@ Here newlines will be saved.  </p>
       
     </span>
     <nav>
-      Patrick Abraham, Yugoslavskiy Daniil
+      Patrick Abraham, Yugoslavskiy Daniil, stanfrbd
     </nav>
   </span>
 

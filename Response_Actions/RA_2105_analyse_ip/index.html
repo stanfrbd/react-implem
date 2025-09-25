@@ -3555,6 +3555,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      External resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6404,6 +6413,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      External resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6473,8 +6491,94 @@
 </tbody>
 </table>
 <h3 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
-<p>Description of the workflow for the Response Action in markdown format.<br />
-Here newlines will be saved.  </p>
+<ol>
+<li>
+<p><strong>Initial Context Gathering</strong>  </p>
+<ul>
+<li>Source of IP: Identify how the IP was flagged (e.g., SIEM alert, IDS/IPS logs, firewall logs).  </li>
+<li>Associated activity: Note any suspicious behavior (e.g., brute force attempts, data exfiltration).  </li>
+<li>Timestamp: Record when the IP was first observed.  </li>
+<li>Use Microsoft Defender Threat Intelligence (MDTI) for IP analysis and CTI correlation.</li>
+</ul>
+</li>
+<li>
+<p><strong>WHOIS and Geolocation Lookup</strong>  </p>
+<ul>
+<li>WHOIS data:  </li>
+<li>ISP, organization, and contact information.  </li>
+<li>Registration and allocation details.  </li>
+<li>Geolocation:  </li>
+<li>Country, region, and city.  </li>
+<li>Check for unusual or suspicious hosting locations.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Reputation and Threat Intelligence Checks</strong><br />
+    Query the IP against:  </p>
+<ul>
+<li><a href="https://www.virustotal.com">VirusTotal</a>   </li>
+<li><a href="https://github.com/stanfrbd/cyberbro">Cyberbro</a>  </li>
+<li><a href="https://www.abuseipdb.com">AbuseIPDB</a>  </li>
+<li><a href="https://ipinfo.io">IPinfo</a>  </li>
+<li><a href="https://otx.alienvault.com">AlienVault OTX</a></li>
+<li><a href="https://security.microsoft.com/threatintelligence">Microsoft Defender Threat Intelligence (MDTI)</a>   </li>
+<li>Look for:  </li>
+<li>Blacklist status.  </li>
+<li>Associated malware or botnet activity.  </li>
+<li>Connections to known threat actor infrastructure.</li>
+</ul>
+</li>
+<li>
+<p><strong>Open Source Intelligence (OSINT)</strong>  </p>
+<ul>
+<li>Search the IP on:  </li>
+<li>Google, forums, and social media.  </li>
+<li>Security blogs or GitHub repositories.  </li>
+<li>Look for:  </li>
+<li>Reports of abuse.  </li>
+<li>Indicators of compromise (IOCs).  </li>
+<li>Connections to known campaigns.</li>
+</ul>
+</li>
+<li>
+<p><strong>Network and Traffic Analysis</strong>  </p>
+<ul>
+<li>Check internal logs:  </li>
+<li>Firewall, proxy, and EDR logs for traffic to/from the IP.  </li>
+<li>Look for unusual patterns or volumes of traffic.  </li>
+<li>Analyze connections:  </li>
+<li>Identify associated domains, subdomains, or other IPs.  </li>
+<li>Check for lateral movement or data exfiltration.</li>
+</ul>
+</li>
+<li>
+<p><strong>Behavioral and Content Analysis</strong>  </p>
+<ul>
+<li>Sandboxing:  </li>
+<li>Use tools like Cuckoo Sandbox or Any.Run to analyze traffic behavior.  </li>
+<li>Manual inspection:  </li>
+<li>Investigate services running on the IP (e.g., HTTP, FTP, SSH).  </li>
+<li>Look for suspicious banners, open ports, or misconfigurations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Correlation and Enrichment</strong>  </p>
+<ul>
+<li>Cross-reference with:  </li>
+<li>Internal logs (proxy, firewall, EDR, ITSM).  </li>
+<li>Other IOCs (domains, file hashes).  </li>
+<li>MITRE ATT&amp;CK techniques.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Identify Outcome</strong><br />
+    - Determine if the IP is legitimate.<br />
+    - Assess if the IP is malicious.<br />
+    - Confirm if the IP is not harmful.</p>
+<h3 id="external-resources">External resources<a class="headerlink" href="#external-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://gopivot.ing/artifacts/ip-address/">GoPivot IP Address Artifacts</a></li>
+</ul>
 
 
 
@@ -6497,7 +6601,7 @@ Here newlines will be saved.  </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 23, 2020 12:13:45 UTC"><span class="timeago" datetime="2020-09-23T12:13:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 23, 2020 12:13:45 UTC">2020-09-23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 25, 2025 12:53:49 UTC"><span class="timeago" datetime="2025-09-25T12:53:49+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 25, 2025 12:53:49 UTC">2025-09-25</span>
   </span>
 
     
@@ -6521,7 +6625,7 @@ Here newlines will be saved.  </p>
       
     </span>
     <nav>
-      Patrick Abraham, Yugoslavskiy Daniil
+      Patrick Abraham, Yugoslavskiy Daniil, stanfrbd
     </nav>
   </span>
 
