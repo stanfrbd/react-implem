@@ -29,10 +29,13 @@
 
 3. **Reputation and Threat Intelligence Checks**  
     - Query the domain against:  
-      - VirusTotal  
-      - MDTI  
-      - Cyberbro  
-      - Google with dorks  
+    - [VirusTotal](https://www.virustotal.com)   
+    - [Cyberbro](https://github.com/stanfrbd/cyberbro)  
+    - [AbuseIPDB](https://www.abuseipdb.com)  
+    - [IPinfo](https://ipinfo.io)  
+    - [AlienVault OTX](https://otx.alienvault.com)
+    - [Microsoft Defender Threat Intelligence (MDTI)](https://security.microsoft.com/threatintelligence)  
+    - Google with dorks  
     - Look for:  
       - Blacklist status.  
       - Associated malware or phishing campaigns.  
