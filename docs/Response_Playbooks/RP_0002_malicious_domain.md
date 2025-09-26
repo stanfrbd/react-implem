@@ -30,8 +30,8 @@ flowchart TD
     style CLOSE_BENIGN fill:#9f9,color:#000000
     style CLOSE_TRUE_POSITIVE fill:#f96,color:#000000
 
-    click ANALYZE "../Response_Actions/RA_2104_analyse_domain_name"
-    click TAKEDOWN "../Response_Actions/RA_3103_c_takedown_external_domain"
-    click BLOCK_EMAIL "../Response_Actions/RA_3201_block_domain_on_email"
-    click BLOCK_NET "../Response_Actions/RA_3103_block_external_domain"
+    click ANALYZE "../../Response_Actions/RA_2104_analyse_domain_name"
+    click TAKEDOWN "../../Response_Actions/RA_3103_c_takedown_external_domain"
+    click BLOCK_EMAIL "../../Response_Actions/RA_3201_block_domain_on_email"
+    click BLOCK_NET "../../Response_Actions/RA_3103_block_external_domain"
 ```
