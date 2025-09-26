@@ -51,9 +51,16 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
 
 plugins:
   - search
+  - mermaid2
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
@@ -237,6 +244,7 @@ nav:
         - "RA3101: Block external IP address": ./Response_Actions/RA_3101_block_external_ip_address.md
         - "RA3102: Block internal IP address": ./Response_Actions/RA_3102_block_internal_ip_address.md
         - "RA3103: Block external domain": ./Response_Actions/RA_3103_block_external_domain.md
+        - "RA3103-C: Takedown external domain": ./Response_Actions/RA_3103_c_takedown_external_domain.md
         - "RA3104: Block internal domain": ./Response_Actions/RA_3104_block_internal_domain.md
         - "RA3105: Block external URL": ./Response_Actions/RA_3105_block_external_url.md
         - "RA3106: Block internal URL": ./Response_Actions/RA_3106_block_internal_url.md
@@ -288,3 +296,4 @@ nav:
         - "RA6002: Conduct lessons learned exercise": ./Response_Actions/RA_6002_conduct_lessons_learned_exercise.md
     - Response Playbooks:
         - "RP0001: Phishing email": ./Response_Playbooks/RP_0001_phishing_email.md
+        - "RP0002: Malicious domain": ./Response_Playbooks/RP_0002_malicious_domain.md
