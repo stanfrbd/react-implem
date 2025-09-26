@@ -16,3 +16,13 @@ Block an external domain name from being accessed by corporate assets, using the
 Warning:  
 
 - Be careful blocking doman names. Make sure it's not a cloud provider or a hoster. If you would like to block something that is hosted on a well-known cloud provider or on a big hoster doman, you should block (if applicable) a specific URL using alternative Response Action   
+
+## General guidelines
+
+- Make sure you have approval from the CIRT manager before blocking a domain name.
+- Use your internal processes and tools to block the domain name.
+- Make sure to have traceability of the action (ticket, who did it, logs, etc.).
+- Document the action taken in the incident ticket.
+
+Note: don't block domain names from well-known cloud providers or hosters, unless you are blocking a specific URL using alternative Response Action.
+If you use IOC management, make sure there is a review of the domain name after 30 days to see if it's still malicious or not.
